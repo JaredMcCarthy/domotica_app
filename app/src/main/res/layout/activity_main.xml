@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        tools:context=".MainActivity">
+
+        <!-- Removed textView16 as requested -->
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="337dp"
+            android:layout_height="21dp"
+            android:text="Manten presionado el foco para ajustar su intencidad"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="315dp" />
+
+        <TextView
+            android:id="@+id/mensaje_principal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="#FFC107"
+            android:padding="8dp"
+            android:text="APLICACIÓN DOMOTICA"
+            android:textAlignment="center"
+            android:textColor="#01534B"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Master Buttons -->
+        <ImageButton
+            android:id="@+id/boton_focos"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Master Focos"
+            app:layout_constraintEnd_toStartOf="@+id/boton_enchufes"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mensaje_principal"
+            app:srcCompat="@drawable/boton_rojo" />
+
+        <ImageButton
+            android:id="@+id/boton_enchufes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Master Enchufes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boton_focos"
+            app:layout_constraintTop_toBottomOf="@+id/mensaje_principal"
+            app:srcCompat="@drawable/boton_rojo" />
+
+        <!-- Primer Piso -->
+        <TextView
+            android:id="@+id/etiqueta_primer_piso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFEB3B"
+            android:padding="6dp"
+            android:text="PRIMER PISO"
+            android:textAlignment="center"
+            android:textColor="#015850"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boton_focos" />
+
+        <ImageButton
+            android:id="@+id/boton_foco_pp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Foco Primer Piso"
+            app:layout_constraintEnd_toStartOf="@+id/boton_enchufe_pp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_primer_piso"
+            app:srcCompat="@drawable/foco_apagado" />
+
+        <ImageButton
+            android:id="@+id/boton_enchufe_pp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Enchufe Primer Piso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boton_foco_pp"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_primer_piso"
+            app:srcCompat="@drawable/off" />
+
+        <!-- Segundo Piso -->
+        <TextView
+            android:id="@+id/etiqueta_segundo_piso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFEB3B"
+            android:padding="6dp"
+            android:text="SEGUNDO PISO"
+            android:textAlignment="center"
+            android:textColor="#015850"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boton_foco_pp" />
+
+        <ImageButton
+            android:id="@+id/boton_foco_sp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Foco Segundo Piso"
+            app:layout_constraintEnd_toStartOf="@+id/boton_enchufe_sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_segundo_piso"
+            app:srcCompat="@drawable/foco_apagado" />
+
+        <ImageButton
+            android:id="@+id/boton_enchufe_sp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Enchufe Segundo Piso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boton_foco_sp"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_segundo_piso"
+            app:srcCompat="@drawable/off" />
+
+        <!-- Tercer Piso -->
+        <TextView
+            android:id="@+id/etiqueta_tercer_piso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFEB3B"
+            android:padding="6dp"
+            android:text="TERCER PISO"
+            android:textAlignment="center"
+            android:textColor="#015850"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boton_foco_sp" />
+
+        <ImageButton
+            android:id="@+id/boton_foco_tp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Foco Tercer Piso"
+            app:layout_constraintEnd_toStartOf="@+id/boton_enchufe_tp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_tercer_piso"
+            app:srcCompat="@drawable/foco_apagado" />
+
+        <ImageButton
+            android:id="@+id/boton_enchufe_tp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Enchufe Tercer Piso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boton_foco_tp"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_tercer_piso"
+            app:srcCompat="@drawable/off" />
+
+        <!-- Exterior y Garaje -->
+        <TextView
+            android:id="@+id/etiqueta_exterior_garaje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFEB3B"
+            android:padding="6dp"
+            android:text="EXTERIOR Y GARAJE"
+            android:textAlignment="center"
+            android:textColor="#015850"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boton_foco_tp" />
+
+        <ImageButton
+            android:id="@+id/boton_foco_garaje"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Foco Garaje"
+            app:layout_constraintEnd_toStartOf="@+id/boton_enchufe_garaje"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_exterior_garaje"
+            app:srcCompat="@drawable/foco_apagado" />
+
+        <ImageButton
+            android:id="@+id/boton_enchufe_garaje"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="Enchufe Garaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boton_foco_garaje"
+            app:layout_constraintTop_toBottomOf="@+id/etiqueta_exterior_garaje"
+            app:srcCompat="@drawable/off" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manten presionado el foco para ajustar su intencidad"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="464dp" />
+
+        <!-- Volver al Menú Principal Button -->
+        <Button
+            android:id="@+id/btn_volver_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#053362"
+            android:text="← Menú Principal"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boton_foco_garaje" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
